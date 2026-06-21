@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guilty Pleasures · Guillotine Collective</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+      }
+
+      body.guilty-pleasures-page {
+        min-height: 100vh;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .guilty-pleasures-covers {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(24px, 4vw, 48px);
+        padding: 40px 24px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .cover-link {
+        display: block;
+        line-height: 0;
+        text-decoration: none;
+        cursor: pointer;
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .cover-link:hover,
+      .cover-link:focus-visible {
+        opacity: 0.88;
+        transform: scale(1.02);
+      }
+
+      .cover-link:focus-visible {
+        outline: 2px solid #111;
+        outline-offset: 4px;
+      }
+
+      .cover-link img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: min(420px, 42vw);
+      }
+
+      @media (max-width: 720px) {
+        .cover-link img {
+          max-width: min(360px, 88vw);
+        }
+      }
+    </style>
+  </head>
+  <body class="guilty-pleasures-page">
+    <main class="guilty-pleasures-covers" role="main" aria-label="Guilty Pleasures covers">
+      <a class="cover-link" href="guilty-pleasures-rise.html" aria-label="Open Guilty Pleasures Part 1: Rise">
+        <img src="images/projects/guilty-pleasures/rise-cover.png" alt="Guilty Pleasures Part 1: Rise" />
+      </a>
+      <a class="cover-link" href="guilty-pleasures-fall.html" aria-label="Open Guilty Pleasures Part 2: Fall">
+        <img src="images/projects/guilty-pleasures/fall-cover.png" alt="Guilty Pleasures Part 2: Fall" />
+      </a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Archives (duplicate of html/ folder)
+html.zip
+
+# Exceeds GitHub 100MB file limit
+images/videoarchive/lastdance_video.mp4

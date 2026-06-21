@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News · Guillotine Collective</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="news-page">
+
+    <!-- TOPBAR / HAMBURGER -->
+    <header class="news-topbar">
+      <nav class="site-nav" aria-label="Primary">
+
+        <button
+          class="site-nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav-menu"
+          aria-label="Menu"
+          type="button"
+        >☰</button>
+
+        <ul class="site-nav-menu" id="site-nav-menu">
+          <li><a href="about.html">about</a></li>
+          <li><a href="manifesto.html" target="_blank">manifesto</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="archive.html">archive</a></li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="news-content" role="main">
+
+      <article class="news-article">
+
+        <!-- TITLE -->
+        <header class="news-header">
+          <h1>We’re on the Move!</h1>
+        </header>
+
+        <!-- IMAGE -->
+        <figure class="news-figure">
+          <img src="images/news/news.png" alt="Gallery view, New Year 2001" />
+
+          <figcaption class="news-caption">
+            gallery view, New Year 2001<br />
+            courtesy of Repa Builder
+          </figcaption>
+        </figure>
+
+        <!-- TEXT -->
+        <div class="news-body">
+
+          <div class="news-text">
+            <p>We’re writing to share some big news with you.</p>
+
+            <p>
+              In 2024, we celebrated our 702nd anniversary. We hope you had a chance to see our survey exhibition
+              <i>Big 300</i> featuring works by more than 300 international artists from throughout our history,
+              as well as our <i>Good Buy Concert</i>, a week long series of performances based on recently discovered
+              scores of Bas Jan Ader.
+            </p>
+
+            <p>
+              At the end of April 2024, we shut down our gallery space at Rue GY 498, Dakar and are currently in
+              the market for a new permanent home, which will host our public exhibitions, educational programming,
+              advocacy and philanthropic work, library and archives, book and editions, inventory storage,
+              and so much more.
+            </p>
+
+            <p>
+              We will announce complete details about our new location and opening date as soon as we have them.
+            </p>
+
+            <p>
+              In the meantime, we are open for business here on our website, and by private appointment.
+            </p>
+
+            <p>
+              Onward! Guillotine Collective
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector(".site-nav");
+        const btn = document.querySelector(".site-nav-toggle");
+    
+        if (!nav || !btn) return;
+    
+        btn.addEventListener("click", function () {
+          nav.classList.toggle("is-open");
+        });
+      });
+    </script>
+    
+
+
+
+
+
+
