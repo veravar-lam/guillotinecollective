@@ -19,7 +19,7 @@
         background-color: #e8e8e8;
         background-image: url("images/projects/project-titles/help.jpg");
         background-size: cover;
-        background-position: center center;
+        background-position: center 40%;
         background-repeat: no-repeat;
         background-attachment: fixed;
       }
@@ -28,9 +28,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: clamp(10px, 1.6vh, 18px);
+        gap: clamp(28px, 4vh, 48px);
         padding:
-          clamp(72px, 30vh, 220px)
+          clamp(50px, 21vh, 160px)
           clamp(16px, 4vw, 40px)
           clamp(24px, 5vh, 48px)
           clamp(20px, 7vw, 72px);
@@ -43,7 +43,7 @@
         width: fit-content;
         max-width: 100%;
         text-decoration: none;
-        line-height: 1;
+        line-height: 1.15;
         color: inherit;
       }
 
@@ -111,7 +111,7 @@
         display: block;
         width: auto;
         height: auto;
-        max-width: min(90vw, 520px);
+        max-width: min(90vw, 680px);
       }
 
       .project-link--loosers .project-title-img,
@@ -120,15 +120,15 @@
       .project-link--people-pleaser .project-title-img,
       .project-link--money .project-title-img,
       .project-link--dinner .project-title-img {
-        height: clamp(18px, 2.4vh, 28px);
+        height: 40px;
       }
 
       .project-link--babyproof .project-title-img {
-        height: clamp(27px, 3.6vh, 42px);
+        height: 60px;
       }
 
       .project-link--painting-fish .project-title-img {
-        height: clamp(23px, 3.1vh, 36px);
+        height: 50px;
       }
 
       @media (max-width: 768px) {
@@ -139,9 +139,9 @@
 
       @media (max-width: 480px) {
         .projects-list {
-          padding-top: clamp(64px, 24vh, 160px);
+          padding-top: clamp(32px, 18vh, 100px);
           padding-left: clamp(16px, 6vw, 32px);
-          gap: clamp(8px, 1.4vh, 14px);
+          gap: clamp(24px, 3.5vh, 40px);
         }
 
         .project-title-img {
