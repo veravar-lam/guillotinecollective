@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects · Guillotine Collective</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
       html, body {
@@ -17,45 +15,175 @@
 
       body.projects-page {
         min-height: 100vh;
-        background-image: url("images/projects/help.jpg");
+        min-height: 100dvh;
+        background-color: #e8e8e8;
+        background-image: url("images/projects/project-titles/help.jpg");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
       }
 
       .projects-list {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 18px;
-        padding: 110px 0 40px 36px;
+        gap: clamp(10px, 1.6vh, 18px);
+        padding:
+          clamp(72px, 30vh, 220px)
+          clamp(16px, 4vw, 40px)
+          clamp(24px, 5vh, 48px)
+          clamp(20px, 7vw, 72px);
+        box-sizing: border-box;
+        max-width: 100%;
       }
 
       .project-link {
         display: block;
         width: fit-content;
+        max-width: 100%;
         text-decoration: none;
-        line-height: 0;
+        line-height: 1;
+        color: inherit;
       }
 
-      .project-link img {
+      /* Typography fallbacks — shown only if the title image fails to load */
+      .project-title {
+        display: none;
+        white-space: nowrap;
+      }
+
+      .project-link--loosers .project-title {
+        font-family: "Apple Chancery", "Chancery", cursive;
+        font-size: 18pt;
+        color: #000;
+      }
+
+      .project-link--guilty-pleasures .project-title {
+        font-family: Impact, "Arial Black", sans-serif;
+        font-size: 18pt;
+        color: #000;
+      }
+
+      .project-link--asmr .project-title {
+        font-family: "Arial Rounded MT Bold", "Arial Rounded MT", "Nunito", sans-serif;
+        font-size: 18pt;
+        color: #000;
+      }
+
+      .project-link--people-pleaser .project-title {
+        font-family: "Airco Std", Arial, sans-serif;
+        font-size: 18pt;
+        font-style: italic;
+        font-weight: 700;
+        color: #fff;
+        -webkit-text-stroke: 1px #000;
+        paint-order: stroke fill;
+      }
+
+      .project-link--babyproof .project-title {
+        font-family: "Balloon Drop Shadow D", "Comic Sans MS", cursive;
+        font-size: 27pt;
+        color: #000;
+      }
+
+      .project-link--painting-fish .project-title {
+        font-family: "Minion Pro", Minion, Georgia, serif;
+        font-size: 23pt;
+        color: #fff;
+        -webkit-text-stroke: 1px #000;
+        paint-order: stroke fill;
+      }
+
+      .project-link--money .project-title {
+        font-family: "8", Impact, "Arial Black", sans-serif;
+        font-size: 18pt;
+        color: #000;
+      }
+
+      .project-link--dinner .project-title {
+        font-family: "Minion Pro", Minion, Georgia, serif;
+        font-size: 18pt;
+        color: #000;
+      }
+
+      .project-title-img {
         display: block;
         width: auto;
         height: auto;
-        max-width: 460px;
+        max-width: min(90vw, 520px);
+      }
+
+      .project-link--loosers .project-title-img,
+      .project-link--guilty-pleasures .project-title-img,
+      .project-link--asmr .project-title-img,
+      .project-link--people-pleaser .project-title-img,
+      .project-link--money .project-title-img,
+      .project-link--dinner .project-title-img {
+        height: clamp(18px, 2.4vh, 28px);
+      }
+
+      .project-link--babyproof .project-title-img {
+        height: clamp(27px, 3.6vh, 42px);
+      }
+
+      .project-link--painting-fish .project-title-img {
+        height: clamp(23px, 3.1vh, 36px);
+      }
+
+      @media (max-width: 768px) {
+        body.projects-page {
+          background-attachment: scroll;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .projects-list {
+          padding-top: clamp(64px, 24vh, 160px);
+          padding-left: clamp(16px, 6vw, 32px);
+          gap: clamp(8px, 1.4vh, 14px);
+        }
+
+        .project-title-img {
+          max-width: 88vw;
+        }
       }
     </style>
   </head>
   <body class="projects-page">
     <main class="projects-list" role="main" aria-label="Project list">
-      <a class="project-link" href="Loosers.html"><img src="images/projects/loosers.png" alt="LOOSERS / SA7 el Noom" /></a>
-      <a class="project-link" href="guilty-pleasures.html"><img src="images/projects/guilty-pleasures.png" alt="Guilty Pleasures" /></a>
-      <a class="project-link" href="asmr.html"><img src="images/projects/asmr.png" alt="DEPORTATION ASMR" /></a>
-      <a class="project-link" href="baybyproof.html"><img src="images/projects/baybyproof.png" alt="BAYBYPROOF" /></a>
-      <a class="project-link" href="PeoplePleaser.html"><img src="images/projects/people-pleaser.png" alt="PEOPLE PLEASER" /></a>
-      <a class="project-link" href="PaintingFish.html"><img src="images/projects/painting-fish.png" alt="Painting Fish" /></a>
-      <a class="project-link" href="money.html"><img src="images/projects/money.png" alt="MONEY$" /></a>
-      <a class="project-link" href="dinner.html"><img src="images/projects/dinner.png" alt="The Dinner" /></a>
+      <a class="project-link project-link--loosers" href="Loosers.html">
+        <img class="project-title-img" src="images/projects/project-titles/loosers.png" alt="LOOSERS / SA7 el Noom" />
+        <span class="project-title">LOOSERS / SA7 el Noom</span>
+      </a>
+      <a class="project-link project-link--guilty-pleasures" href="guilty-pleasures.html">
+        <img class="project-title-img" src="images/projects/project-titles/guilty-pleasures.png" alt="Guilty Pleasures" />
+        <span class="project-title">Guilty Pleasures</span>
+      </a>
+      <a class="project-link project-link--asmr" href="asmr.html">
+        <img class="project-title-img" src="images/projects/project-titles/asmr.png" alt="DEPORTATION ASMR" />
+        <span class="project-title">DEPORTATION ASMR</span>
+      </a>
+      <a class="project-link project-link--babyproof" href="baybyproof.html">
+        <img class="project-title-img" src="images/projects/project-titles/baybyproof.png" alt="BAYBYPROOF" />
+        <span class="project-title">BAYBYPROOF</span>
+      </a>
+      <a class="project-link project-link--people-pleaser" href="PeoplePleaser.html">
+        <img class="project-title-img" src="images/projects/project-titles/people-pleaser.png" alt="PEOPLE PLEASER" />
+        <span class="project-title">PEOPLE PLEASER</span>
+      </a>
+      <a class="project-link project-link--painting-fish" href="PaintingFish.html">
+        <img class="project-title-img" src="images/projects/project-titles/painting-fish.png" alt="Painting Fish" />
+        <span class="project-title">Painting Fish</span>
+      </a>
+      <a class="project-link project-link--money" href="money.html">
+        <img class="project-title-img" src="images/projects/project-titles/money.png" alt="MONEY$" />
+        <span class="project-title">MONEY$</span>
+      </a>
+      <a class="project-link project-link--dinner" href="dinner.html">
+        <img class="project-title-img" src="images/projects/project-titles/dinner.png" alt="The Dinner" />
+        <span class="project-title">The Dinner</span>
+      </a>
     </main>
   </body>
 </html>

@@ -9,18 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const nav = document.querySelector(".site-nav");
-      const btn = document.querySelector(".site-nav-toggle");
-  
-      if (!nav || !btn) return;
-  
-      btn.addEventListener("click", function () {
-        nav.classList.toggle("is-open");
-      });
-    });
-  </script>
   <body class="about2-page">
     <header class="about2-topbar">
       <nav class="site-nav" aria-label="Primary">
@@ -33,7 +21,7 @@
         >☰</button>
         <ul class="site-nav-menu" id="site-nav-menu">
           <li><a href="news.html">We're on the move!</a></li>
-          <a href="manifesto.pdf" target="_blank">manifesto</a>
+          <li><a href="manifesto.pdf" target="_blank">manifesto</a></li>
           <li><a href="projects.html">projects</a></li>
           <li><a href="archive.html">archive</a></li>
         </ul>
@@ -48,12 +36,12 @@
         <p>
           is a non profit gallery, an anonymous artist group, a pre-copyright publishing house, and an alleged filmarchive.
         We have organized, curated, presented and collaborated
-on more then 150 solo and group exhibitions by pioneering
-emerging artists at our gallery locations as well as at other
-collaborating venues, including galleries, cinemas, abandoned
-locations, food markets, secondary schools and private homes around the world. We continue to honor our ongoing
-commitment to building cultural dialogue across time and space until this very moment
-and forever more.
+        on more then 150 solo and group exhibitions by pioneering
+        emerging artists at our gallery locations as well as at other
+        collaborating venues, including galleries, cinemas, abandoned
+        locations, food markets, secondary schools and private homes around the world. We continue to honor our ongoing
+        commitment to building cultural dialogue across time and space until this very moment
+        and forever more.
         </p>
       </article>
       <section class="about2-hero" aria-hidden="true">
@@ -61,41 +49,25 @@ and forever more.
       </section>
     </main>
     <script>
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         var nav = document.querySelector(".site-nav");
-        var toggle = document.querySelector(".site-nav-toggle");
-        if (!nav || !toggle) return;
+        var btn = document.querySelector(".site-nav-toggle");
+        if (!nav || !btn) return;
 
-        var mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-
-        function setOpen(open) {
-          nav.classList.toggle("is-open", open);
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        }
-
-        toggle.addEventListener("click", function () {
-          if (mq.matches) return;
-          setOpen(!nav.classList.contains("is-open"));
+        btn.addEventListener("click", function () {
+          var open = !nav.classList.contains("is-open");
+          nav.classList.toggle("is-open");
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
         });
 
         document.addEventListener("click", function (e) {
-          if (mq.matches || !nav.classList.contains("is-open")) return;
-          if (!nav.contains(e.target)) setOpen(false);
+          if (!nav.classList.contains("is-open")) return;
+          if (!nav.contains(e.target)) {
+            nav.classList.remove("is-open");
+            btn.setAttribute("aria-expanded", "false");
+          }
         });
-
-        mq.addEventListener("change", function () {
-          setOpen(false);
-        });
-      })();
-    </script>
-    <script>
-      const nav = document.querySelector('.site-nav');
-      const toggle = document.querySelector('.site-nav-toggle');
-    
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
       });
     </script>
   </body>
 </html>
-
