@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loosers · Guillotine Collective</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+      }
+
+      body.loosers-page {
+        min-height: 100vh;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loosers-publications {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(24px, 4vw, 48px);
+        padding: 40px 24px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .cover-link {
+        display: block;
+        line-height: 0;
+        text-decoration: none;
+        cursor: pointer;
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .cover-link:hover,
+      .cover-link:focus-visible {
+        opacity: 0.88;
+        transform: scale(1.02);
+      }
+
+      .cover-link:focus-visible {
+        outline: 2px solid #111;
+        outline-offset: 4px;
+      }
+
+      .pdf-preview {
+        display: block;
+        width: min(420px, 42vw);
+        aspect-ratio: 3 / 4;
+        border: 0;
+        background: #f4f4f4;
+        pointer-events: none;
+      }
+
+      @media (max-width: 720px) {
+        .pdf-preview {
+          width: min(360px, 88vw);
+        }
+      }
+    </style>
+  </head>
+  <body class="loosers-page">
+    <main class="loosers-publications" role="main" aria-label="Loosers publications">
+      <a class="cover-link" href="images/loosers/loosers-de.pdf" aria-label="Open Loosers German publication">
+        <object
+          class="pdf-preview"
+          data="images/loosers/loosers-de.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0"
+          type="application/pdf"
+          aria-label="Loosers German publication preview"
+        ></object>
+      </a>
+      <a class="cover-link" href="images/loosers/loosers-en.pdf" aria-label="Open Loosers English publication">
+        <object
+          class="pdf-preview"
+          data="images/loosers/loosers-en.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0"
+          type="application/pdf"
+          aria-label="Loosers English publication preview"
+        ></object>
+      </a>
+    </main>
+  </body>
+</html>
