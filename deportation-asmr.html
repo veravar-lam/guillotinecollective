@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DEPORTATION ASMR · Guillotine Collective</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #000;
+      }
+
+      .deportation-asmr-page {
+        color: #fff;
+        overflow: hidden;
+      }
+
+      .deportation-asmr-main {
+        box-sizing: border-box;
+        height: 100vh;
+        height: 100dvh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .deportation-asmr-frame {
+        width: min(100vw, 56.25vh);
+        width: min(100vw, 56.25dvh);
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        background: #000;
+      }
+
+      .deportation-asmr-video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        object-fit: cover;
+        object-position: center center;
+      }
+    </style>
+  </head>
+  <body class="deportation-asmr-page">
+    <main class="deportation-asmr-main" aria-label="DEPORTATION ASMR">
+      <div class="deportation-asmr-frame">
+        <video
+          class="deportation-asmr-video"
+          controls
+          preload="metadata"
+          playsinline
+        >
+          <source
+            src="images/projects/deportation-asmr/deportation-asmr.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video element.
+        </video>
+      </div>
+    </main>
+  </body>
+</html>
