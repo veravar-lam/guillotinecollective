@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BABYPROOF · Guillotine Collective</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #fff;
+      }
+
+      body {
+        color: #111;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .babyproof-stage {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 100vh;
+        padding: clamp(36px, 8vw, 96px) clamp(20px, 6vw, 72px);
+      }
+
+      .babyproof-intro {
+        min-height: calc(100vh - clamp(72px, 16vw, 192px));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .babyproof-button {
+        display: block;
+        width: min(100%, 632px);
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .babyproof-image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .babyproof-content {
+        display: none;
+      }
+
+      .babyproof-stage.is-open .babyproof-intro {
+        display: none;
+      }
+
+      .babyproof-stage.is-open .babyproof-content {
+        display: block;
+      }
+
+      .babyproof-figure {
+        margin: 0 auto;
+      }
+
+      .babyproof-figure--text {
+        width: min(100%, 786px);
+      }
+
+      .babyproof-figure--play {
+        width: min(100%, 635px);
+        margin-top: clamp(120px, 24vh, 240px);
+        margin-bottom: clamp(48px, 10vh, 120px);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="babyproof-stage" aria-label="BABYPROOF">
+      <section class="babyproof-intro" aria-label="Open BABYPROOF project">
+        <button class="babyproof-button" type="button" aria-label="Open BABYPROOF">
+          <img
+            class="babyproof-image"
+            src="images/projects/babyproof/cake.png"
+            alt="BABYPROOF cake"
+          />
+        </button>
+      </section>
+
+      <section class="babyproof-content" aria-label="BABYPROOF project images">
+        <figure class="babyproof-figure babyproof-figure--text">
+          <img
+            class="babyproof-image"
+            src="images/projects/babyproof/text.png"
+            alt="BABYPROOF text"
+          />
+        </figure>
+
+        <figure class="babyproof-figure babyproof-figure--play">
+          <img
+            class="babyproof-image"
+            src="images/projects/babyproof/play-4.png"
+            alt="BABYPROOF play"
+          />
+        </figure>
+      </section>
+    </main>
+
+    <script>
+      document.querySelector(".babyproof-button").addEventListener("click", function () {
+        document.querySelector(".babyproof-stage").classList.add("is-open");
+        window.scrollTo({ top: 0, behavior: "auto" });
+      });
+    </script>
+  </body>
+</html>
