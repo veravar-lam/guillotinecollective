@@ -4,70 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Guillotine Collective</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="about2-page">
-    <header class="about2-topbar">
-      <nav class="site-nav" aria-label="Primary">
-        <button
-          type="button"
-          class="site-nav-toggle"
-          aria-expanded="false"
-          aria-controls="site-nav-menu"
-          aria-label="Open menu"
-        >☰</button>
-        <ul class="site-nav-menu" id="site-nav-menu">
-          <li><a href="news.html">We're on the move!</a></li>
-          <li><a href="manifesto.pdf" target="_blank">manifesto</a></li>
-          <li><a href="projects.html">projects</a></li>
-          <li><a href="exhibitions.html">archive</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="about2-main" role="main">
-      <section class="about2-hero" aria-label="Motto">
-        <img class="about2-title-img" src="images/about/WorriesFade.png" alt="Where Worries Fade and Dreams Come True" />
-      </section>
-      <article class="about2-body">
-        <h2>Guillotine Collective</h2>
-        <p>
-          is a non profit gallery, an anonymous artist group, a pre-copyright publishing house, and an alleged filmarchive.
-        We have organized, curated, presented and collaborated
-        on more then 150 solo and group exhibitions by pioneering
-        emerging artists at our gallery locations as well as at other
-        collaborating venues, including galleries, cinemas, abandoned
-        locations, food markets, secondary schools and private homes around the world. We continue to honor our ongoing
-        commitment to building cultural dialogue across time and space until this very moment
-        and forever more.
-        </p>
-      </article>
-      <section class="about2-hero" aria-hidden="true">
-        <img class="about2-title-img about2-title-img--mirror" src="images/about/WorriesFade.png" alt="" />
-      </section>
+  <body class="index-page">
+    <main class="index-stage" aria-label="Guillotine Collective">
+      <p class="index-quote index-quote--top">
+        And after all these words... mind you... Guillotine &mdash; what a word
+      </p>
+
+      <img
+        class="index-sticker index-sticker--top"
+        src="images/index/sticker-red-top.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <a class="index-logo-link" href="about.html" aria-label="About Guillotine Collective">
+        <img
+          class="index-logo"
+          src="images/index/index-headline.png"
+          alt="Guillotine Collective"
+        />
+      </a>
+
+      <img
+        class="index-sticker index-sticker--bottom"
+        src="images/index/sticker-red-bottom.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <p class="index-quote index-quote--bottom">
+        And after all these words... mind you... Guillotine &mdash; what a word
+      </p>
+
+      <p class="index-copyright index-copyright--left">&copy; Guillotine Collective</p>
+      <p class="index-copyright index-copyright--right">&copy; Guillotine Collective</p>
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var nav = document.querySelector(".site-nav");
-        var btn = document.querySelector(".site-nav-toggle");
-        if (!nav || !btn) return;
-
-        btn.addEventListener("click", function () {
-          var open = !nav.classList.contains("is-open");
-          nav.classList.toggle("is-open");
-          btn.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-
-        document.addEventListener("click", function (e) {
-          if (!nav.classList.contains("is-open")) return;
-          if (!nav.contains(e.target)) {
-            nav.classList.remove("is-open");
-            btn.setAttribute("aria-expanded", "false");
-          }
-        });
-      });
-    </script>
   </body>
 </html>

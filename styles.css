@@ -40,6 +40,129 @@ header {
   max-width: 100%;
   height: auto;
 }
+
+/* ===== Index page ===== */
+.index-page {
+  background: #b43a31;
+  color: #050505;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.index-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.index-logo-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: min(62.8vw, 508px);
+  transform: translate(-50%, -50%);
+}
+
+.index-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.index-sticker {
+  position: absolute;
+  left: 50%;
+  display: block;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.index-sticker--top {
+  top: calc(50% - 106px);
+  width: min(9.3vw, 75px);
+}
+
+.index-sticker--bottom {
+  top: calc(50% + 80px);
+  width: min(11.8vw, 96px);
+}
+
+.index-quote,
+.index-copyright {
+  position: absolute;
+  margin: 0;
+  color: #f7e51e;
+  line-height: 1;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.55px #050505;
+  text-shadow:
+    -1px -1px 0 #050505,
+    1px -1px 0 #050505,
+    -1px 1px 0 #050505,
+    1px 1px 0 #050505;
+}
+
+.index-quote {
+  left: 50%;
+  font-size: clamp(10px, 1.7vw, 14px);
+  font-weight: 700;
+}
+
+.index-quote--top {
+  top: 13%;
+  transform: translateX(-50%);
+}
+
+.index-quote--bottom {
+  bottom: 10.8%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.index-copyright {
+  top: 50%;
+  font-size: clamp(9px, 1.35vw, 12px);
+  font-weight: 400;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  color: #050505;
+}
+
+.index-copyright--left {
+  left: 8.6%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.index-copyright--right {
+  right: 5.4%;
+  transform: translate(50%, -50%) rotate(-90deg);
+}
+
+@media (max-width: 640px) {
+  .index-logo-link {
+    width: 63vw;
+  }
+
+  .index-sticker--top {
+    width: 9.5vw;
+  }
+
+  .index-sticker--bottom {
+    width: 12vw;
+  }
+
+  .index-copyright--left {
+    left: 7%;
+  }
+
+  .index-copyright--right {
+    right: 4%;
+  }
+}
 main {
   display: grid;
 }
