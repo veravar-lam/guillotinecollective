@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PEOPLE PLEASER · Guillotine Collective</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #000;
+      }
+
+      .people-pleaser-page {
+        color: #fff;
+        overflow: hidden;
+      }
+
+      .people-pleaser-main {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+      }
+
+      .people-pleaser-video {
+        display: block;
+        width: min(94vw, calc(100vh * 1.7778));
+        width: min(94vw, calc(100dvh * 1.7778));
+        max-width: 100%;
+        max-height: 100vh;
+        max-height: 100dvh;
+        height: auto;
+        background: #000;
+      }
+
+      @media (max-width: 720px) {
+        .people-pleaser-video {
+          width: 100vw;
+        }
+      }
+    </style>
+  </head>
+  <body class="people-pleaser-page">
+    <main class="people-pleaser-main" aria-label="PEOPLE PLEASER">
+      <video
+        class="people-pleaser-video"
+        controls
+        preload="metadata"
+        playsinline
+      >
+        <source
+          src="images/projects/people-pleaser/people-pleaser.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video element.
+      </video>
+    </main>
+  </body>
+</html>
