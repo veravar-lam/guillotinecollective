@@ -347,27 +347,51 @@ footer {
   min-height: 100svh;
   min-height: 100dvh;
   box-sizing: border-box;
-  display: grid;
-  place-items: center;
-  padding: 60px 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(28px, 4vw, 64px);
+  padding: 40px clamp(32px, 6vw, 96px) 64px 0;
 }
 .exhibition-detail-figure {
-  width: 100%;
-  height: calc(100vh - 80px);
-  height: calc(100svh - 80px);
-  height: calc(100dvh - 80px);
+  flex: 0 0 63vw;
+  max-width: 65vw;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .exhibition-detail-figure img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+}
+.exhibition-detail-text {
+  flex: 0 1 360px;
+  max-width: 380px;
+  margin: 0;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  font-size: 13pt;
+  line-height: 1.2;
+  text-align: left;
+}
+.exhibition-detail-text p {
+  margin: 0 0 1em 0;
+}
+.exhibition-detail-text p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 760px) {
+  .exhibition-detail-main {
+    display: block;
+    padding: 40px 24px 64px 0;
+  }
+  .exhibition-detail-figure {
+    width: 100%;
+    max-width: none;
+  }
+  .exhibition-detail-text {
+    max-width: 380px;
+    margin: 28px 0 0 24px;
+    padding-right: 24px;
+  }
 }
 
 /* ===== Exhibitions Overview page ===== */
