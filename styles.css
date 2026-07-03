@@ -349,20 +349,160 @@ footer {
   color: #fff;
 }
 
-.video-grid-tile span {
+.video-title {
   position: absolute;
   left: 14px;
   bottom: 14px;
   max-width: calc(100% - 28px);
   box-sizing: border-box;
-  padding: 6px 8px;
-  background: rgba(0, 0, 0, 0.48);
-  color: #fff;
+  padding: 6px 8px 5px 8px;
+  background: rgba(0, 0, 0, 0.56);
+  color: #ffffff;
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(13px, 1.8vw, 18px);
   line-height: 1.1;
   text-align: left;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.video-title--kiss,
+.video-title--garden,
+.video-title--sirens {
+  background: rgba(255, 255, 255, 0.88);
+  color: #0b0b0b;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-shadow: none;
+  text-transform: none;
+}
+
+.video-title--bulgakov {
+  left: 10%;
+  right: 8%;
+  bottom: 10%;
+  max-width: none;
+  background: rgba(230, 163, 96, 0.9);
+  color: #111;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-style: italic;
+  font-size: clamp(14px, 2vw, 22px);
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.video-title--undercoverers {
+  bottom: 9%;
+  background: rgba(230, 163, 96, 0.9);
+  color: #160821;
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: clamp(19px, 3vw, 32px);
+  letter-spacing: 0.08em;
+  text-shadow:
+    -1px -1px 0 #ff73a6,
+    1px -1px 0 #ff73a6,
+    -1px 1px 0 #ff73a6,
+    1px 1px 0 #ff73a6;
+  text-transform: uppercase;
+}
+
+.video-title--vips {
+  bottom: 12%;
+  background: rgba(230, 163, 96, 0.9);
+  color: #7a4b22;
+  font-family: "Comic Sans MS", "Marker Felt", fantasy;
+  font-size: clamp(24px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  text-shadow:
+    -1px -1px 0 #181818,
+    1px -1px 0 #181818,
+    -1px 1px 0 #181818,
+    1px 1px 0 #181818;
+}
+
+.video-title--chuchelo {
+  left: auto;
+  right: 14px;
+  bottom: 10%;
+  background: rgba(230, 163, 96, 0.9);
+  color: #111;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(20px, 3.8vw, 38px);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  text-shadow: 0.03em 0.03em 0 #222;
+}
+
+.video-title--mommy {
+  bottom: 11%;
+  background: rgba(230, 163, 96, 0.9);
+  color: #111;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(15px, 2.4vw, 26px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-shadow:
+    -1px -1px 0 #e0a363,
+    1px -1px 0 #e0a363,
+    -1px 1px 0 #e0a363,
+    1px 1px 0 #e0a363;
+  text-transform: uppercase;
+}
+
+.video-title--ispy {
+  left: auto;
+  right: 14px;
+  bottom: 12%;
+  background: rgba(230, 163, 96, 0.9);
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(16px, 2.6vw, 30px);
+  font-weight: 400;
+  text-align: right;
+  text-shadow: none;
+}
+
+.video-title--desire {
+  left: auto;
+  right: 14px;
+  bottom: 12%;
+  background: rgba(255, 255, 255, 0.88);
+  color: #111;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  text-align: right;
+  text-shadow: none;
+}
+
+.video-title--love {
+  background: rgba(255, 255, 255, 0.88);
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 4vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  text-shadow:
+    -1px 0 0 #111,
+    0 1px 0 #111;
+}
+
+.video-title--golden {
+  left: auto;
+  right: 14px;
+  bottom: 12%;
+  background: rgba(255, 255, 255, 0.88);
+  color: #b77b40;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(18px, 3vw, 32px);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  text-align: right;
+  text-shadow: 0.04em 0.04em 0 #7b4d25;
 }
 
 .film-detail-main {
@@ -410,11 +550,18 @@ footer {
 }
 
 @media (max-width: 680px) {
-  .video-grid-tile span {
+  .video-title {
     left: 10px;
     bottom: 10px;
     max-width: calc(100% - 20px);
     padding: 5px 7px;
+  }
+
+  .video-title--bulgakov,
+  .video-title--ispy,
+  .video-title--desire,
+  .video-title--golden {
+    right: 10px;
   }
 
   .film-detail-main {
