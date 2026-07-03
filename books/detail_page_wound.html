@@ -3,33 +3,96 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guillotine Collective · Surrealism As a Wound To Be Beheld By God</title>
+    <title>Guillotine Collective · Surrealism As A Wound To Be Beheld By God</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .wound-detail-main {
+        max-width: 820px;
+        padding-top: 18px;
+      }
+
+      .wound-hero {
+        display: grid;
+        grid-template-columns: minmax(280px, 390px) minmax(90px, 140px);
+        gap: clamp(48px, 9vw, 84px);
+        align-items: end;
+      }
+
+      .wound-hero .detail-cover {
+        width: 100%;
+        aspect-ratio: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 0;
+      }
+
+      .wound-hero .detail-cover img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .wound-note {
+        align-self: center;
+        margin: 0 0 12px 0;
+        font-size: 18px;
+        line-height: 1.05;
+        color: #ffffff;
+      }
+
+      .wound-detail-main .detail-meta {
+        margin-top: 32px;
+      }
+
+      .wound-detail-main .detail-meta h1 {
+        margin-bottom: 28px;
+      }
+
+      .wound-detail-main .detail-description {
+        max-width: 760px;
+      }
+
+      @media (max-width: 680px) {
+        .wound-hero {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .wound-note {
+          margin-left: 0;
+        }
+      }
+    </style>
   </head>
   <body class="detail-page">
     <header class="detail-topbar">
       <div><a href="../bookstore.html" class="brand-link">bookstore</a></div>
     </header>
-    <main class="detail-main" role="main">
-      <div class="detail-cover">
-        <img src="../images/bookstore/wound.png" alt="Surrealism As a Wound To Be Beheld By God cover" />
+    <main class="detail-main wound-detail-main" role="main">
+      <div class="wound-hero">
+        <div class="detail-cover">
+          <img src="../images/bookstore/wound.png" alt="Surrealism As A Wound To Be Beheld By God cover" />
+        </div>
+        <p class="wound-note">
+          for<br />
+          being<br />
+          beheld<br />
+          by<br />
+          love<br />
+          which<br />
+          is<br />
+          always<br />
+          resistance
+        </p>
       </div>
       <section class="detail-meta">
-        <h1>Surrealism As a Wound To Be Beheld By God</h1>
-        <h2>A reader on injury, devotion and the image</h2>
+        <h1>Surrealism As A Wound To Be Beheld By God</h1>
       </section>
       <section class="detail-description">
-        <p>A publication on surrealism as an open wound: a site where devotion, violence, comedy and vision remain visible at once. This volume gathers image fragments and short texts around the ecstatic damage of looking.</p>
-      </section>
-      <div class="detail-status">$ 144.00</div>
-      <section class="detail-info">
-        <p>Text by Guillotine Collective</p>
-        <p>self published</p>
-        <p>128p, color, softcover, 10x14 inches</p>
-        <p>ISBN: unknown</p>
+        <p>An illustrated zine, it explores decreation as a generative act — a peeling away of surfaces, a site of emergence. At its core is the slit: a threshold, an opening, a wound. The slit is neither absence nor void, but a dynamic site where offerings are made — gestures of appeasement, desire, and control (inserting offerings through the slits of sacred enclosures or slipping bills into the garments of dancers). The work reframes these acts as metaphysical transactions with the unknowable — attempts to touch and be held by something beyond form and vision. A slit is also the parting of eyelids, and the dilation of the camera's aperture, a sudden flash of vision. In this double function: offering (holding) and seeing (beholding), fissure moves beyond sacrifice, and towards a site of becoming. A space where vision and wound coalesce, where power and passivity collapse into one another. Where images are peeled back, skin-like, and reality begins to flicker.</p>
       </section>
     </main>
   </body>
