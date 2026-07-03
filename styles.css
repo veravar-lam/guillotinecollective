@@ -658,8 +658,8 @@ footer {
 
 /* ===== Publication detail page ===== */
 .detail-page {
-  background: #fff;
-  color: #111;
+  background: #000;
+  color: #fff;
   font-family: "Playfair Display", Georgia, serif;
 }
 .detail-topbar {
@@ -676,8 +676,8 @@ footer {
 .detail-cover {
   width: 320px;
   aspect-ratio: 1 / 1;
-  background: #f5d300;
-  color: #b1321c;
+  background: transparent;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
