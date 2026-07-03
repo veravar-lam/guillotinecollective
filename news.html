@@ -30,7 +30,18 @@
           <li><a href="about.html">about</a></li>
           <li><a href="manifesto.html" target="_blank">manifesto</a></li>
           <li><a href="projects.html">projects</a></li>
-          <li><a href="exhibitions.html">archive</a></li>
+          <li class="site-nav-submenu">
+            <button
+              type="button"
+              class="site-nav-submenu-toggle"
+              aria-expanded="false"
+            >Archive</button>
+            <ul class="site-nav-submenu-menu">
+              <li><a href="exhibitions.html">Exhibitions</a></li>
+              <li><a href="bookstore.html">Bookstore</a></li>
+              <li><a href="videoarchive.html">Video Archive</a></li>
+            </ul>
+          </li>
         </ul>
 
       </nav>
@@ -100,11 +111,35 @@
       document.addEventListener("DOMContentLoaded", function () {
         const nav = document.querySelector(".site-nav");
         const btn = document.querySelector(".site-nav-toggle");
+        const submenu = document.querySelector(".site-nav-submenu");
+        const submenuBtn = document.querySelector(".site-nav-submenu-toggle");
     
         if (!nav || !btn) return;
     
         btn.addEventListener("click", function () {
-          nav.classList.toggle("is-open");
+          const open = !nav.classList.contains("is-open");
+          nav.classList.toggle("is-open", open);
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        if (submenu && submenuBtn) {
+          submenuBtn.addEventListener("click", function () {
+            const open = !submenu.classList.contains("is-open");
+            submenu.classList.toggle("is-open", open);
+            submenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        }
+
+        document.addEventListener("click", function (e) {
+          if (!nav.classList.contains("is-open")) return;
+          if (!nav.contains(e.target)) {
+            nav.classList.remove("is-open");
+            btn.setAttribute("aria-expanded", "false");
+            if (submenu && submenuBtn) {
+              submenu.classList.remove("is-open");
+              submenuBtn.setAttribute("aria-expanded", "false");
+            }
+          }
         });
       });
     </script>
